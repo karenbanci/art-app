@@ -1,76 +1,64 @@
-.App {
-  text-align: center;
-  background-color: white;
-}
-
-.App-header {
-  margin: 40px;
-  display: flex;
-
-  .paint-image {
-    border-radius: 30px;
-    width: 550px;
-    height: 550px;
-  }
-}
-.header {
-  display: flex;
-  flex-direction: column;
-}
-
-.header-top {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  margin: 20px;
-}
-
-.header-text {
-  margin: 40px 40px;
-}
-
-.header-bottom {
-  display: flex;
-  flex-direction: row;
-  justify-content: start;
-  margin: 0 40px;
-}
-
-.logo {
-  width: 40px;
-  height: 40px;
-}
-
-/* Button */
-.button-dark {
-  background-color: rgb(60, 58, 58);
-  width: max-content;
-  color: white;
-  border-radius: 50px;
-  margin: 5px;
-  padding: 8px 20px;
-  border: none;
-  cursor: pointer;
-}
-
-.button-light {
-  background-color: white;
-  width: max-content;
-  color: rgb(60, 58, 58);
-  border-radius: 50px;
-  margin: 5px;
-  padding: 8px 20px;
-  border: 1px solid #8080802b;
-  cursor: pointer;
+/* Colors */
+:root {
+  --grey: rgb(60, 58, 58);
+  --light-grey: rgba(60, 58, 58, 0.5);
+  --white: white;
+  --pink: #f19295;
 }
 
 /* Fonts */
 h1 {
+  margin: 40px 40px;
   font-size: 3.5rem;
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
   text-align: initial;
   color: rgb(60, 58, 58);
+}
+
+p {
+  margin: 40px 40px;
+  font-size: 1rem;
+  font-family: "Quicksand", sans-serif;
+  font-weight: 400;
+  text-align: initial;
+  color: rgb(60, 58, 58);
+}
+
+/* Button */
+.button-dark {
+  background-color: var(--grey);
+  color: var(--white);
+  width: max-content;
+  border-radius: 50px;
+  margin: 5px;
+  padding: 8px 20px;
+  border: none;
+  border: 1px solid var(--white);
+  cursor: pointer;
+}
+
+.button-dark:hover {
+  background-color: var(--white);
+  color: var(--grey);
+  border: 1px solid var(--light-grey);
+}
+
+.button-light {
+  background-color: var(--white);
+  width: max-content;
+  color: var(--grey);
+  border-radius: 50px;
+  margin: 5px;
+  padding: 8px 20px;
+  border: 1px solid var(--light-grey);
+  cursor: pointer;
+}
+
+.button-light:hover {
+  background-color: var(--grey);
+  color: var(--white);
+  border: 1px solid var(--white);
 }
 
 /* Animation */

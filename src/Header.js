@@ -82,7 +82,7 @@ function Header() {
   `;
 
   const YellowBox = styled.div`
-    background-color: #ffdd95;
+    background-color: #e0c979;
     border-radius: 20px;
     width: 55%;
     height: 200px;
@@ -138,7 +138,12 @@ function Header() {
             </div>
             <h3>rating by more than 5k users globally</h3>
           </PinkBox>
-          <YellowBox></YellowBox>
+          <YellowBox>
+            <div className="title">
+              <h2>design</h2>
+            </div>
+            <h3>rating by more than 5k users globally</h3>
+          </YellowBox>
         </Boxes>
       </Container>
     </Header>

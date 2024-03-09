@@ -61,6 +61,25 @@ p {
   border: 1px solid var(--white);
 }
 
+.button-navbar {
+  background-color: var(--white);
+  font-family: "Quicksand", sans-serif;
+  color: var(--grey);
+  border: none;
+  cursor: pointer;
+  margin-right: 20px;
+  padding: 5px 10px;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: initial;
+}
+
+.button-navbar:hover {
+  background-color: var(--light-grey);
+  color: var(--white);
+  border-radius: 50px;
+}
+
 /* Animation */
 
 @media (prefers-reduced-motion: no-preference) {

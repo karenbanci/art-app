@@ -35,6 +35,13 @@ function Header() {
     justify-content: center;
   `;
 
+  const Navbar = styled.div`
+    display: flex;
+    flex-direction: row;
+    margin: 0px 40px 40px;
+    /* justify-content: space-evenly; */
+  `;
+
   const HeaderImageHero = styled.div`
     .paint-image {
       border-radius: 30px;
@@ -94,6 +101,17 @@ function Header() {
             methods, and acquire precious knowledge about the industry.
           </p>
         </Description>
+        <Navbar>
+          <button type="button" className="button-navbar">
+            How it Works
+          </button>
+          <button type="button" className="button-navbar">
+            About us
+          </button>
+          <button type="button" className="button-navbar">
+            FAQ
+          </button>
+        </Navbar>
       </HeaderDescription>
       <Container>
         <HeaderImageHero>

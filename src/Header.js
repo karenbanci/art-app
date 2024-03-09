@@ -72,13 +72,13 @@ function Header() {
     justify-content: center;
     padding: 0px 20px;
     margin-right: 10px;
-  `;
 
-  const Rating = styled.div`
-    border-radius: 50px;
-    background-color: #d98486;
-    width: 90px;
-    padding: 10px 0px;
+    .rating {
+      border-radius: 50px;
+      background-color: #d98486;
+      width: 90px;
+      padding: 10px 0px;
+    }
   `;
 
   const YellowBox = styled.div`
@@ -133,9 +133,9 @@ function Header() {
 
         <Boxes>
           <PinkBox>
-            <Rating>
+            <div className="rating">
               <h2>4.75</h2>
-            </Rating>
+            </div>
             <h3>rating by more than 5k users globally</h3>
           </PinkBox>
           <YellowBox></YellowBox>

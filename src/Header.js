@@ -33,6 +33,7 @@ function Header() {
     display: flex;
     flex-direction: column;
     justify-content: center;
+    margin: 40px;
   `;
 
   const Navbar = styled.div`
@@ -66,6 +67,18 @@ function Header() {
     border-radius: 20px;
     width: 40%;
     height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 20px;
+    margin-right: 10px;
+  `;
+
+  const Rating = styled.div`
+    border-radius: 50px;
+    background-color: #d98486;
+    width: 90px;
+    padding: 10px 0px;
   `;
 
   const YellowBox = styled.div`
@@ -119,7 +132,12 @@ function Header() {
         </HeaderImageHero>
 
         <Boxes>
-          <PinkBox></PinkBox>
+          <PinkBox>
+            <Rating>
+              <h2>4.75</h2>
+            </Rating>
+            <h3>rating by more than 5k users globally</h3>
+          </PinkBox>
           <YellowBox></YellowBox>
         </Boxes>
       </Container>

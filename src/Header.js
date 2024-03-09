@@ -44,10 +44,18 @@ function Header() {
   `;
 
   const HeaderImageHero = styled.div`
-    .paint-image {
-      border-radius: 30px;
-      width: 550px;
-      height: 550px;
+    background-image: url("./paint.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 30px;
+    width: 550px;
+    height: 550px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+
+    .arrow-hero {
+      margin: 20px;
     }
   `;
   const Container = styled.div`
@@ -86,6 +94,14 @@ function Header() {
     border-radius: 20px;
     width: 55%;
     height: 200px;
+
+    .title {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px;
+    }
   `;
 
   return (
@@ -128,7 +144,9 @@ function Header() {
       </HeaderDescription>
       <Container>
         <HeaderImageHero>
-          <img className="paint-image" src="./paint.jpeg" alt="Artists" />
+          <button className="arrow-buttom arrow-hero">
+            <img className="arrow" src="./go-back-arrow.svg" alt="arrow" />
+          </button>
         </HeaderImageHero>
 
         <Boxes>
@@ -141,6 +159,9 @@ function Header() {
           <YellowBox>
             <div className="title">
               <h2>design</h2>
+              <button className="arrow-buttom">
+                <img className="arrow" src="./go-back-arrow.svg" alt="arrow" />
+              </button>
             </div>
             <h3>rating by more than 5k users globally</h3>
           </YellowBox>

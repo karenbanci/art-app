@@ -5,14 +5,16 @@ function Header() {
   const Header = styled.header`
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    /* justify-content: space-evenly; */
+    justify-content: space-between;
+    margin: 30px;
   `;
 
   const HeaderTop = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 20px 20px 100px 20px;
+    margin: 0px 20px 100px 20px;
   `;
 
   const Logo = styled.img`
@@ -20,7 +22,11 @@ function Header() {
     height: 40px;
   `;
 
-  const HeaderDescription = styled.div``;
+  const HeaderDescription = styled.div`
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+  `;
 
   const HeaderBottom = styled.div`
     display: flex;
@@ -33,13 +39,18 @@ function Header() {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    margin: 40px;
+    margin: 30px 40px;
+    animation: fadeInRight 3s ease forwards;
+
+    /* margin: 40px; */
   `;
 
   const Navbar = styled.div`
     display: flex;
     flex-direction: row;
-    margin: 0px 40px 40px;
+    margin: 0px 40px;
+    animation: fadeInRight 3s ease forwards;
+
     /* justify-content: space-evenly; */
   `;
 
@@ -48,20 +59,24 @@ function Header() {
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 30px;
-    width: 550px;
+    width: 100%;
     height: 550px;
     display: flex;
     justify-content: flex-end;
     align-items: flex-end;
+    animation: fadeInLeft 2s ease forwards;
 
     .arrow-hero {
       margin: 20px;
     }
   `;
+
   const Container = styled.div`
     display: flex;
     flex-direction: column;
-    margin: 20px;
+    width: 50%;
+
+    /* margin: 30px 30px 20px; */
   `;
   const Boxes = styled.div`
     margin: 20px 0px 0px;
@@ -74,12 +89,13 @@ function Header() {
     background-color: #f19295;
     border-radius: 20px;
     width: 40%;
-    height: 200px;
+    height: 250px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     padding: 0px 20px;
     margin-right: 10px;
+    animation: fadeInLeft 2.5s ease forwards;
 
     .rating {
       border-radius: 50px;
@@ -93,7 +109,8 @@ function Header() {
     background-color: #e0c979;
     border-radius: 20px;
     width: 55%;
-    height: 200px;
+    height: 250px;
+    animation: fadeInLeft 3s ease forwards;
 
     .title {
       display: flex;
@@ -113,7 +130,11 @@ function Header() {
             Get in Touch
           </button>
         </HeaderTop>
-        <h1>Unleash Your Creativity at the Arts Conference for Artists</h1>
+        <h1>
+          <span class="line">Unleash Your</span>
+          <span class="line">Creativity at the Arts</span>
+          <span class="line">Conference for Artists</span>
+        </h1>
         <HeaderBottom>
           <button type="button" className="button-dark">
             Check our Portfolio

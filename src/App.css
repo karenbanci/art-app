@@ -8,12 +8,60 @@
 
 /* Fonts */
 h1 {
-  margin: 40px 40px;
   font-size: 3.5rem;
+  margin: 40px 40px;
   font-family: "Quicksand", sans-serif;
   font-weight: 700;
   text-align: initial;
   color: var(--grey);
+}
+
+h1 .line {
+  display: block; /* Cada linha é um bloco */
+  opacity: 0;
+  animation: fadeInUp 0.8s ease forwards;
+}
+h1 .line:nth-child(1) {
+  animation-delay: 0.5s;
+}
+h1 .line:nth-child(2) {
+  animation-delay: 1s;
+}
+h1 .line:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes fadeInRight {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 h2 {
@@ -27,13 +75,13 @@ h2 {
 
 h3 {
   font-family: "Quicksand", sans-serif;
-  font-size: 1rem;
+  font-size: 1.1rem;
   color: var(--white);
   font-weight: 400;
 }
 
 p {
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-family: "Quicksand", sans-serif;
   font-weight: 400;
   text-align: initial;
@@ -43,6 +91,7 @@ p {
 /* Button */
 .button-dark {
   background-color: var(--grey);
+  font-size: 1.1rem;
   color: var(--white);
   width: max-content;
   border-radius: 50px;
@@ -51,6 +100,7 @@ p {
   border: none;
   border: 1px solid var(--white);
   cursor: pointer;
+  animation: fadeInRight 3s ease forwards;
 }
 
 .button-dark:hover {
@@ -61,6 +111,7 @@ p {
 
 .button-light {
   background-color: var(--white);
+  font-size: 1.1rem;
   width: max-content;
   color: var(--grey);
   border-radius: 50px;
@@ -68,6 +119,7 @@ p {
   padding: 8px 20px;
   border: 1px solid var(--light-grey);
   cursor: pointer;
+  animation: fadeInRight 3s ease forwards;
 }
 
 .button-light:hover {
@@ -84,7 +136,7 @@ p {
   cursor: pointer;
   margin-right: 20px;
   padding: 5px 10px;
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 400;
   text-align: initial;
 }

@@ -55,7 +55,7 @@ function Header() {
   `;
 
   const HeaderImageHero = styled.div`
-    background-image: url("./paint.jpeg");
+    background-image: url("./art.jpeg");
     background-size: cover;
     background-repeat: no-repeat;
     border-radius: 30px;

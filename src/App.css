@@ -64,6 +64,15 @@ h1 .line:nth-child(3) {
   }
 }
 
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 h2 {
   font-family: "Quicksand", sans-serif;
   font-size: 1.3rem;
@@ -96,7 +105,7 @@ p {
   width: max-content;
   border-radius: 50px;
   margin: 5px;
-  padding: 8px 20px;
+  padding: 10px 20px;
   border: none;
   border: 1px solid var(--white);
   cursor: pointer;
@@ -116,7 +125,7 @@ p {
   color: var(--grey);
   border-radius: 50px;
   margin: 5px;
-  padding: 8px 20px;
+  padding: 10px 20px;
   border: 1px solid var(--light-grey);
   cursor: pointer;
   animation: fadeInRight 3s ease forwards;

@@ -1,6 +1,7 @@
 import "./App.css";
 import styled from "styled-components";
 import Header from "./Header";
+import Body from "./Body";
 
 function App() {
   const App = styled.div`
@@ -11,6 +12,7 @@ function App() {
   return (
     <App>
       <Header />
+      <Body />
     </App>
   );
 }

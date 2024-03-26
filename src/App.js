@@ -1,7 +1,7 @@
 import "./App.scss";
 import styled from "styled-components";
 import Header from "./Header";
-import Body from "./Body";
+import Artworks from "./Artworks";
 
 function App() {
   const App = styled.div`
@@ -12,7 +12,7 @@ function App() {
   return (
     <App>
       <Header />
-      <Body />
+      <Artworks />
     </App>
   );
 }

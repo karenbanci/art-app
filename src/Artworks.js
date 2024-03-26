@@ -2,11 +2,11 @@ import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 // import ScrollWrapper from "./elements/ScrollWrapper";
 import "./App.scss";
-import "./Body.scss";
+import "./Artworks.scss";
 
 // import styled from "styled-components";
 
-function Body() {
+function Artworks() {
   const [showModal, setShowModal] = useState(false);
   const [disapearingModal, setDisapearingModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
@@ -96,4 +96,4 @@ function Body() {
   );
 }
 
-export default Body;
+export default Artworks;

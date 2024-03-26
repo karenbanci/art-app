@@ -5,7 +5,7 @@ function Header() {
   const Header = styled.header`
     display: flex;
     flex-direction: row;
-    /* justify-content: space-evenly; */
+
     justify-content: space-between;
     margin: 30px;
   `;
@@ -20,6 +20,7 @@ function Header() {
   const Logo = styled.img`
     width: 40px;
     height: 40px;
+    animation: fadeInRight 3s ease forwards;
   `;
 
   const HeaderDescription = styled.div`

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from "react";
 import { useInView } from "react-intersection-observer";
 // import ScrollWrapper from "./elements/ScrollWrapper";
-import "./App.css";
-import "./Body.css";
+import "./App.scss";
+import "./Body.scss";
 
 // import styled from "styled-components";
 

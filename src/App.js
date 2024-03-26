@@ -1,4 +1,4 @@
-import "./App.css";
+import "./App.scss";
 import styled from "styled-components";
 import Header from "./Header";
 import Body from "./Body";

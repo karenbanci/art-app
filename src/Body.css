@@ -1,0 +1,100 @@
+.body {
+  display: flex;
+  justify-content: center;
+  margin: 100px 30px 30px;
+}
+.body .container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+}
+
+.body .info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.body #title {
+  font-size: 3rem;
+  margin: 20px;
+}
+
+.body .card {
+  cursor: pointer;
+  background-color: var(--white);
+  border: none;
+}
+
+.body .art-card {
+  width: 400px;
+  height: 400px;
+  margin: 5px;
+  border-radius: 30px;
+  /* animation: fadeIn 3s ease forwards; */
+  /* animation: grow 2s ease-in forwards; */
+}
+
+.styled-art-card {
+  width: 100%;
+  height: 100%;
+  border-radius: 30px;
+  opacity: 0; /* Inicia invisível */
+  transform: scale(0); /* Inicia menor */
+  animation: fadeInUp 3s ease forwards;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  animation: fadeIn 1s ease forwards;
+}
+
+.modal.modal-active {
+  display: block;
+}
+
+.modal.modal-disapearing {
+  animation: fadeOut 1s ease-out forwards;
+}
+
+.modal .modal-content {
+  position: absolute;
+  flex-direction: column;
+  align-items: end;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 700px;
+  height: 700px;
+  max-width: 90%;
+  max-height: 90%;
+  overflow: auto;
+  padding: 20px;
+  display: flex;
+}
+
+.modal .modal-content button {
+  font-size: 2rem;
+  display: flex;
+  justify-content: center;
+  border-radius: 50%;
+  border: none;
+  padding: 10px;
+  align-items: center;
+  margin: 10px;
+  width: 40px;
+  height: 40px;
+}
+
+.modal img {
+  border-radius: 30px;
+  width: 100%; /* Set image width to fill the modal content */
+  height: 100%; /* Set image height to fill the modal content */
+  object-fit: cover; /* Ensure the aspect ratio is maintained without stretching */
+}

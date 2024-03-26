@@ -2,6 +2,7 @@ import "./App.scss";
 import styled from "styled-components";
 import Header from "./Header";
 import Artworks from "./Artworks";
+import Blog from "./Blog";
 
 function App() {
   const App = styled.div`
@@ -13,6 +14,7 @@ function App() {
     <App>
       <Header />
       <Artworks />
+      <Blog />
     </App>
   );
 }

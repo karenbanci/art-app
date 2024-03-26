@@ -5,7 +5,6 @@ function Header() {
   const Header = styled.header`
     display: flex;
     flex-direction: row;
-
     justify-content: space-between;
     margin: 30px;
   `;

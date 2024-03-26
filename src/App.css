@@ -73,6 +73,26 @@ h1 .line:nth-child(3) {
   }
 }
 
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes grow {
+  from {
+    transform: scale(0.7); /* Inicia a imagem totalmente reduzida */
+    opacity: 0; /* Inicia a imagem totalmente transparente */
+  }
+  to {
+    transform: scale(1); /* Escala normal da imagem */
+    opacity: 1; /* Imagem totalmente opaca */
+  }
+}
+
 h2 {
   font-family: "Quicksand", sans-serif;
   font-size: 1.3rem;

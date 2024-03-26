@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import { useInView } from "react-intersection-observer";
+// import ScrollWrapper from "./elements/ScrollWrapper";
 import "./App.css";
 import "./Body.css";
 
@@ -9,6 +11,10 @@ function Body() {
   const [disapearingModal, setDisapearingModal] = useState(false);
   const [selectedImage, setSelectedImage] = useState("");
   const [loaded, setLoaded] = useState(false);
+
+  const { ref, inView } = useInView({
+    threshold: 0,
+  });
 
   const images = [
     "hands.jpeg",
@@ -41,7 +47,12 @@ function Body() {
   }
 
   return (
-    <div className="body">
+    <div
+      className={`body ${inView ? "in-view" : ""}`}
+      // className="body "
+      inView={inView}
+      ref={ref}
+    >
       <div
         className={`modal ${showModal ? "modal-active" : ""} ${
           disapearingModal ? "modal-disapearing" : ""

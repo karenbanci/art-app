@@ -1,10 +1,14 @@
 .body {
   display: flex;
   justify-content: center;
-  margin: 100px 30px 30px;
+  margin: 100px 0px;
+
   .container {
     display: grid;
     grid-template-columns: auto auto auto;
+    // display: flex;
+    // flex-direction: row;
+    // flex-wrap: wrap;
   }
   .info {
     display: flex;

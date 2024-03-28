@@ -4,10 +4,7 @@ import "./App.scss";
 import "./Blog.scss";
 
 function Blog() {
-  const [isHovered, setIsHovered] = useState(false);
-  const [activeId, setActiveId] = useState(null);
   const [loaded, setLoaded] = useState(false);
-
   const [activeImage, setActiveImage] = useState({ column: null, index: null });
 
   const handleMouseEnter = (column, index) => () => {
@@ -32,12 +29,40 @@ function Blog() {
 
   const navbar = ["All", "Design", "Product", "Leadership", "Managment"];
 
-  const imagesLeft = ["blog-beach.jpeg", "blog-bridge.jpeg", "blog-cars.jpeg"];
+  const blogPostsLeft = [
+    {
+      image: "blog-beach.jpeg",
+      url: "/beach-post",
+      alt: "A relaxing beach scene",
+    },
+    {
+      image: "blog-bridge.jpeg",
+      url: "/bridge-post",
+      alt: "A stunning bridge at sunset",
+    },
+    {
+      image: "blog-cars.jpeg",
+      url: "/cars-post",
+      alt: "Busy city streets with cars",
+    },
+  ];
 
-  const imagesRight = [
-    "blog-dinamarca.jpeg",
-    "blog-food.jpeg",
-    "blog-person.jpeg",
+  const blogPostRight = [
+    {
+      image: "blog-dinamarca.jpeg",
+      url: "/denmark-post",
+      alt: "Colorful buildings in Denmark",
+    },
+    {
+      image: "blog-food.jpeg",
+      url: "/food-post",
+      alt: "Delicious food spread on a table",
+    },
+    {
+      image: "blog-person.jpeg",
+      url: "/dance-post",
+      alt: "A person dancing on the street",
+    },
   ];
 
   return (
@@ -66,53 +91,39 @@ function Blog() {
       </div>
       <div className="card-container">
         <div className="images-left">
-          {imagesLeft.map((image, index) => (
-            <img
-              onMouseEnter={handleMouseEnter("left", index)}
-              onMouseLeave={handleMouseLeave}
-              key={image}
-              className={`blog-card ${
-                activeImage.column === "left" && activeImage.index === index
-                  ? "active"
-                  : ""
-              }`}
-              src={`./${image}`}
-              alt={`left side art ${index + 1}`}
-            />
+          {blogPostsLeft.map((post, index) => (
+            <a href={post.url} key={post.image}>
+              <img
+                onMouseEnter={handleMouseEnter("left", index)}
+                onMouseLeave={handleMouseLeave}
+                className={`blog-card ${
+                  activeImage.column === "left" && activeImage.index === index
+                    ? "active"
+                    : ""
+                }`}
+                src={`./${post.image}`}
+                alt={post.alt}
+              />
+            </a>
           ))}
         </div>
         <div className="images-right">
-          {imagesRight.map((image, index) => (
-            <img
-              onMouseEnter={handleMouseEnter("right", index)}
-              onMouseLeave={handleMouseLeave}
-              key={image}
-              className={`blog-card ${
-                activeImage.column === "right" && activeImage.index === index
-                  ? "active"
-                  : ""
-              } ${
-                activeImage.column && index > activeImage.index
-                  ? "card-hovered"
-                  : ""
-              }`}
-              src={`./${image}`}
-              alt={`right side art ${index + 1}`}
-            />
+          {blogPostRight.map((post, index) => (
+            <a href={post.url} key={post.image}>
+              <img
+                onMouseEnter={handleMouseEnter("right", index)}
+                onMouseLeave={handleMouseLeave}
+                className={`blog-card ${
+                  activeImage.column === "right" && activeImage.index === index
+                    ? "active"
+                    : ""
+                }`}
+                src={`./${post.image}`}
+                alt={post.alt}
+              />
+            </a>
           ))}
         </div>
-        {/* {imagesLeft.map((image, index) => (
-          <img
-            onMouseEnter={handleMouseEnter(index)}
-            onMouseLeave={handleMouseLeave}
-            key={image}
-            className={`blog-card ${
-              isHovered && activeId === index ? "active" : ""
-            }`}
-            src={`./${image}`}
-            alt={`art ${index + 1}`}
-          />
-        ))} */}
       </div>
     </div>
   );

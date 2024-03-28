@@ -48,7 +48,7 @@ function Blog() {
       ref={ref}
     >
       <div className="top">
-        <h1 id="tittle">Blog</h1>
+        <h1 id="title">Blog</h1>
         <div className="navbar">
           {navbar.map((item) => (
             <button type="button" className="button-navbar">
@@ -57,9 +57,12 @@ function Blog() {
           ))}
         </div>
       </div>
-      <div className="description">
-        <p id="top">Discover and read the latest post and articles</p>
-        <p id="bottom">about designm art and etc...</p>
+      <div className="description-container">
+        <div className="description">
+          <p id="top">Discover and read the latest post and articles</p>
+          <p id="bottom">about designm art and etc...</p>
+        </div>
+        <div className="empty"></div>
       </div>
       <div className="card-container">
         <div className="images-left">

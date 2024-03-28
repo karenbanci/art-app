@@ -9,9 +9,9 @@
     align-items: center;
   }
 
-  #tittle {
+  #title {
     font-size: 3rem;
-    margin: 20px;
+    margin: 10px 80px;
   }
   .navbar {
   }
@@ -33,18 +33,20 @@
     }
   }
 
-  .description {
-    display: flex;
-    flex-direction: column;
+  .description-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
 
-    p {
-      margin: 0px;
-    }
+    .description {
+      display: flex;
+      flex-direction: column;
 
-    #bottom {
-      margin-bottom: 20px;
+      p {
+        margin: 0px;
+      }
     }
   }
+
   .card-container {
     margin: 10px;
     display: grid;

@@ -42,12 +42,9 @@
     border-radius: 30px;
   }
 
-  .styled-blog-card {
+  .active {
     width: 400px;
-    height: 200px;
-    border-radius: 30px;
-    // opacity: 0;
-    // transform: scale(0);
+    height: 400px;
   }
 
   &.in-view {

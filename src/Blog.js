@@ -4,13 +4,20 @@ import "./App.scss";
 import "./Blog.scss";
 
 function Blog() {
-  const [loaded, setLoaded] = useState(false);
-  // const [openImage, setOpenImage] = useState(false);
-  // const [selectedImage, setSelectedImage] = useState("");
+  const [isHovered, setIsHovered] = useState(false);
+  const [activeId, setActiveId] = useState(null);
 
-  const { ref, inView } = useInView({
-    threshold: 0,
-  });
+  const handleMouseEnter = (index) => () => {
+    setIsHovered(true);
+    setActiveId(index);
+    console.log("mouse enter", index);
+  };
+
+  const handleMouseLeave = () => {
+    setIsHovered(false);
+    setActiveId(null);
+    console.log("mouse leave");
+  };
 
   const images = [
     "blog-beach.jpeg",
@@ -21,31 +28,10 @@ function Blog() {
     "blog-person.jpeg",
   ];
 
-  useEffect(() => {
-    setLoaded(true);
-    return () => {
-      setLoaded(false);
-    };
-  }, []);
-
-  // function handleClick(image) {
-  //   setSelectedImage(image);
-  //   setShowModal(true);
-  // }
-
-  // function handleClose() {
-  //   setDisapearingModal(true);
-
-  //   setTimeout(() => {
-  //     setShowModal(false);
-  //     setDisapearingModal(false);
-  //   }, 1000);
-  // }
-
   return (
     <div
-      // className="blog-container"
-      className={`blog-container ${inView ? "in-view" : ""}`}
+      className="blog-container"
+      // className={`blog-container ${inView ? "in-view" : ""}`}
     >
       <div className="top">
         <h1 id="tittle">Blog</h1>
@@ -74,9 +60,12 @@ function Blog() {
       <div className="card-container">
         {images.map((image, index) => (
           <img
-            // onClick={() => handleClick(`./${image}`)}
-            key={index}
-            className={`blog-card ${loaded ? "loaded" : ""} styled-blog-card`}
+            onMouseEnter={handleMouseEnter(index)}
+            onMouseLeave={handleMouseLeave}
+            key={image}
+            className={`blog-card ${
+              isHovered && activeId === index ? "active" : ""
+            }`}
             src={`./${image}`}
             alt={`art ${index + 1}`}
           />

@@ -18,18 +18,6 @@ function Blog() {
     setActiveImage({ column: null, index: null });
   };
 
-  // const handleMouseEnter = (index) => () => {
-  //   setIsHovered(true);
-  //   setActiveId(index);
-  //   console.log("mouse enter", index);
-  // };
-
-  // const handleMouseLeave = () => {
-  //   setIsHovered(false);
-  //   setActiveId(null);
-  //   console.log("mouse leave");
-  // };
-
   const { ref, inView } = useInView({
     threshold: 0,
   });
@@ -41,6 +29,8 @@ function Blog() {
       setLoaded(false);
     };
   }, []);
+
+  const navbar = ["All", "Design", "Product", "Leadership", "Managment"];
 
   const imagesLeft = ["blog-beach.jpeg", "blog-bridge.jpeg", "blog-cars.jpeg"];
 
@@ -60,21 +50,11 @@ function Blog() {
       <div className="top">
         <h1 id="tittle">Blog</h1>
         <div className="navbar">
-          <button type="button" className="button-navbar">
-            All
-          </button>
-          <button type="button" className="button-navbar">
-            Design
-          </button>
-          <button type="button" className="button-navbar">
-            Product
-          </button>
-          <button type="button" className="button-navbar">
-            Leadership
-          </button>
-          <button type="button" className="button-navbar">
-            Managment
-          </button>
+          {navbar.map((item) => (
+            <button type="button" className="button-navbar">
+              {item}
+            </button>
+          ))}
         </div>
       </div>
       <div className="description">

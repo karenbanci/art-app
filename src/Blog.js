@@ -34,16 +34,19 @@ function Blog() {
       image: "blog-beach.jpeg",
       url: "/beach-post",
       alt: "A relaxing beach scene",
+      title: "Beach Adventure",
     },
     {
       image: "blog-bridge.jpeg",
       url: "/bridge-post",
       alt: "A stunning bridge at sunset",
+      title: "Bridge at Sunset",
     },
     {
       image: "blog-cars.jpeg",
       url: "/cars-post",
       alt: "Busy city streets with cars",
+      title: "City Life",
     },
   ];
 
@@ -52,22 +55,24 @@ function Blog() {
       image: "blog-dinamarca.jpeg",
       url: "/denmark-post",
       alt: "Colorful buildings in Denmark",
+      title: "Colorful Denmark",
     },
     {
       image: "blog-food.jpeg",
       url: "/food-post",
       alt: "Delicious food spread on a table",
+      title: "Gourmet Feast",
     },
     {
       image: "blog-person.jpeg",
       url: "/dance-post",
       alt: "A person dancing on the street",
+      title: "Street Dance",
     },
   ];
 
   return (
     <div
-      // className="blog-container"
       className={`blog-container ${inView ? "in-view" : ""}`}
       inView={inView}
       ref={ref}
@@ -92,7 +97,9 @@ function Blog() {
       <div className="card-container">
         <div className="images-left">
           {blogPostsLeft.map((post, index) => (
-            <a href={post.url} key={post.image}>
+            <a href={post.url} key={post.image} className="blog-card-link">
+              <h4 className="blog-card-title">{post.title}</h4>
+
               <img
                 onMouseEnter={handleMouseEnter("left", index)}
                 onMouseLeave={handleMouseLeave}
@@ -109,7 +116,8 @@ function Blog() {
         </div>
         <div className="images-right">
           {blogPostRight.map((post, index) => (
-            <a href={post.url} key={post.image}>
+            <a href={post.url} key={post.image} className="blog-card-link">
+              <h4 className="blog-card-title">{post.title}</h4>
               <img
                 onMouseEnter={handleMouseEnter("right", index)}
                 onMouseLeave={handleMouseLeave}

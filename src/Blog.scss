@@ -59,9 +59,19 @@
       height: 200px;
       margin: 5px;
       border-radius: 30px;
-      // transition: margin 1s ease;
       transition: width 1s ease, height 1s ease, margin-top 1s ease,
         transform 1s ease;
+      position: relative;
+    }
+
+    .blog-card-title {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background-color: rgba(0, 0, 0, 0.6);
+      color: white;
+      padding: 0.5em;
+      border-radius: 5px;
     }
 
     .images-left .images-right {
